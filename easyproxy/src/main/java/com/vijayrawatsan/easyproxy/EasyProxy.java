@@ -50,13 +50,13 @@ public class EasyProxy {
             sIncludeSet = include;
         }
         sDefaultProxy = defaultProxy;
-        ProxySelector.setDefault(new CustomProxySelector(ProxySelector.getDefault()));
+        ProxySelector.setDefault(new EasyProxySelector(ProxySelector.getDefault()));
     }
 
-    static class CustomProxySelector extends ProxySelector {
+    static class EasyProxySelector extends ProxySelector {
         private final ProxySelector mDefaultProxySelector;
 
-        public CustomProxySelector(ProxySelector defaultProxySelector) {
+        public EasyProxySelector(ProxySelector defaultProxySelector) {
             this.mDefaultProxySelector = defaultProxySelector;
         }
 

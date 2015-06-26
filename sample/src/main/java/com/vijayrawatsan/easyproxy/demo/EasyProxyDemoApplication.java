@@ -13,7 +13,6 @@ public class EasyProxyDemoApplication extends Application {
     @Override
     public void onCreate() {
         EasyProxy.init(new ProxyInfo("10.125.24.28", 8080));
-//        EasyProxy.init(new ProxyInfo("10.1.85.64", 8080));
         super.onCreate();
     }
 }
